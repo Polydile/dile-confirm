@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal box demo!!</title>
+  <style>
+  body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  h1 {
+    font-weight: 300;
+  }
+  p {
+    margin-top: 0;
+  }
+  #myModal2 {
+    --dile-modal-height: 300px;
+  }
+  #myModalCustomized {
+    --dile-modal-border-radius: 0;
+    --dile-modal-content-background-color: #303030;
+    --dile-modal-width: 200px;
+    --dile-modal-min-width: 100px;
+    text-align: center;
+    --dile-modal-content-shadow-color: #ddd;
+    --dile-modal-background-color: #fff;
+    --dile-confirm-buttons-text-align: center;
+  }
+  #myModalCustomized p {
+    color: #f66;
+    font-size: 0.9em;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
+  #myModalCustomized div {
+    padding-bottom: 10px;
+  }
+  </style>
+</head>
+<body>
+  <h1>Modal Demo</h1>
+  <button id="openbutton">Open a confirm box</button>
+  <button id="openbutton3">Open a confirm box customized</button>
+  
+  <dile-confirm id="myModal">
+    <p>
+      Do you really want to delete this element?
+    </p>
+  </dile-confirm> 
+
+  <dile-confirm id="myModalCustomized">
+    <div>
+      <p>¿Are you sure?</p>
+    </div>
+  </dile-confirm> 
+
+  <script src="../dile-confirm.js" type="module"></script>
+
+  <script>
+  let confirmElement = document.getElementById('myModal');
+  confirmElement.addEventListener('dile-confirm-accepted', () => {
+    console.log('confirm dialog accepted');
+  });
+  confirmElement.addEventListener('dile-confirm-cancelled', () => {
+    console.log('confirm dialog cancelled');
+  });
+  document.getElementById('openbutton').addEventListener('click', () => {
+    confirmElement.open();
+  });
+  
+  let confirmElement3 = document.getElementById('myModalCustomized');
+  document.getElementById('openbutton3').addEventListener('click', () => {
+    confirmElement3.open();
+  });
+  
+  </script>
+</body>
+</html>

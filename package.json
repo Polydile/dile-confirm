@@ -1,0 +1,33 @@
+{
+  "name": "dile-confirm",
+  "version": "1.0.0",
+  "description": "Confirm modal box based on LitElement.",
+  "main": "dile-confirm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polydile/dile-confirm.git"
+  },
+  "keywords": [
+    "confirm",
+    "box",
+    "javascript",
+    "web",
+    "component",
+    "litelement",
+    "lithtml",
+    "modal"
+  ],
+  "author": "Miguel Angel Alvarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Polydile/dile-confirm/issues"
+  },
+  "homepage": "https://github.com/Polydile/dile-confirm#readme",
+  "dependencies": {
+    "dile-modal": "^1.1.0",
+    "lit-element": "^2.2.0"
+  }
+}
