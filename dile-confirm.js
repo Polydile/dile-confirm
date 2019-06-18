@@ -47,11 +47,20 @@ class DileConfirm  extends LitElement {
       <dile-modal id="modal" @dile-modal-background-closed="${this.cancel}">
         <slot></slot>
         <div class="actions">
-          <a href="#" class="button cancel" @click="${this.cancel}">${this.cancelLabel}</a>
-          <a href="#" class="button accept" @click="${this.accept}">${this.acceptLabel}</a>
+          <a href="#" class="button cancel" @click="${this._cancelHandler}">${this.cancelLabel}</a>
+          <a href="#" class="button accept" @click="${this._acceptHandler}">${this.acceptLabel}</a>
         </div>
       </dile-modal>
     `;
+  }
+
+  _cancelHandler(e) {
+    e.preventDefault();
+    this.cancel();
+  }
+  _acceptHandler(e) {
+    e.preventDefault();
+    this.accept();
   }
 
   open() {
