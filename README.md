@@ -29,7 +29,7 @@ In addition, the confirm box display two buttons inside the modal interface:
 
 ## Properties
 
-- **opened**: Bolean property used to change the modal state, false is closed / true means open.
+- **opened**: Bolean property used to change the confirm modal state, false is closed / true means open.
 - **cancelLabel**: The text to the cancel button.
 - **acceptLabel**: The text to the accept button.
 

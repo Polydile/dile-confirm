@@ -31,6 +31,7 @@ export class DileConfirm  extends LitElement {
 
   static get properties() {
     return {
+      opened: { type: Boolean },
       acceptLabel: { type: String },
       cancelLabel: { type: String },
     };
@@ -40,11 +41,12 @@ export class DileConfirm  extends LitElement {
     super();
     this.acceptLabel = 'Accept';
     this.cancelLabel = 'Cancell';
+    this.opened = false;
   }
 
   render() {
     return html`
-      <dile-modal id="modal" @dile-modal-background-closed="${this.cancel}">
+      <dile-modal ?opened="${this.opened}" id="modal" @dile-modal-background-closed="${this.cancel}">
         <slot></slot>
         <div class="actions">
           <a href="#" class="button cancel" @click="${this._cancelHandler}">${this.cancelLabel}</a>
@@ -64,11 +66,11 @@ export class DileConfirm  extends LitElement {
   }
 
   open() {
-    this.modal.open();
+    this.opened = true;
   }
 
   close() {
-    this.modal.close();
+    this.opened = false;
   }
 
   firstUpdated() {
