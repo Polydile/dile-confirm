@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import 'dile-modal/dile-modal';
 
-class DileConfirm  extends LitElement {
+export class DileConfirm  extends LitElement {
 
   static get styles() {
     return css`
