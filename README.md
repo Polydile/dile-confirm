@@ -2,6 +2,8 @@
 
 This is a Web Component to implement a modal confirm box, based on LitElement.
 
+Let's [go to DEMOS page](https://dile-confirm.polydile.com)!
+
 # Use
 
 Install it from npm:
