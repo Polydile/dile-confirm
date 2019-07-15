@@ -34,6 +34,7 @@ In addition, the confirm box display two buttons inside the modal interface:
 - **opened**: Bolean property used to change the confirm modal state, false is closed / true means open.
 - **cancelLabel**: The text to the cancel button.
 - **acceptLabel**: The text to the accept button.
+- **blocking**: Click on the background layer do not closes the confirm box.
 
 ## Methods
 

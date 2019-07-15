@@ -68,4 +68,18 @@ storiesOf('dile-confirm', module)
       }>Open a customized confirm box</button>
     `,
   )
+  .add(
+    'Large text confirm',
+    () => html`
+      <dile-confirm id="myModal" blocking>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque ratione quos aspernatur molestias officia praesentium, dicta nulla, numquam repudiandae tenetur, amet ab laboriosam cumque! Maxime odio nam nobis tempora alias.
+      </dile-confirm>
+      <button @click=${
+        () => {
+          let confirmElement = document.getElementById('myModal');
+          confirmElement.open();
+        }
+      }>Open a confirm box</button>
+    `,
+  )
   .add('Documentation', () => withClassPropertiesKnobs(DileConfirm), { notes: { markdown: readme } })

@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/Polydile/dile-confirm#readme",
   "dependencies": {
-    "dile-modal": "^1.1.0",
+    "dile-modal": "^1.3",
     "lit-element": "^2.2.0"
   },
   "devDependencies": {

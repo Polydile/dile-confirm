@@ -23,7 +23,7 @@ export class DileConfirm  extends LitElement {
         color: var(--dile-confirm-accept-text-button-color, #fff);
       }
       .actions {
-        margin-bottom: 10px;
+        margin: 10px 0;
         text-align: var(--dile-confirm-buttons-text-align, right);
       }
     `;
@@ -34,6 +34,7 @@ export class DileConfirm  extends LitElement {
       opened: { type: Boolean },
       acceptLabel: { type: String },
       cancelLabel: { type: String },
+      blocking: { type: Boolean }
     };
   }
 
@@ -42,11 +43,12 @@ export class DileConfirm  extends LitElement {
     this.acceptLabel = 'Accept';
     this.cancelLabel = 'Cancell';
     this.opened = false;
+    this.blocking = false;
   }
 
   render() {
     return html`
-      <dile-modal ?opened="${this.opened}" id="modal" @dile-modal-background-closed="${this.cancel}">
+      <dile-modal ?blocking="${this.blocking}" ?opened="${this.opened}" id="modal" @dile-modal-background-closed="${this.cancel}">
         <slot></slot>
         <div class="actions">
           <a href="#" class="button cancel" @click="${this._cancelHandler}">${this.cancelLabel}</a>
