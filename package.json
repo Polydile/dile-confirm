@@ -1,6 +1,6 @@
 {
   "name": "dile-confirm",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Confirm modal box based on LitElement.",
   "main": "dile-confirm.js",
   "scripts": {
