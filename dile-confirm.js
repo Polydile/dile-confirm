@@ -26,6 +26,9 @@ export class DileConfirm  extends LitElement {
         margin: 10px 0;
         text-align: var(--dile-confirm-buttons-text-align, right);
       }
+      .actions a {
+        margin: 4px;
+      }
     `;
   }
 
