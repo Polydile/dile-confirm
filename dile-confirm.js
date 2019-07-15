@@ -12,6 +12,7 @@ export class DileConfirm  extends LitElement {
         border-radius: var(--dile-confirm-border-radius-button, 5px);
         padding: var(--dile-confirm-padding-button, 7px);
         font-size: var(--dile-confirm-font-size-button, 1em);
+        text-transform: var(--dile-confirm-text-transform, uppercase);
         text-decoration: none;
       }
       .cancel {

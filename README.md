@@ -62,3 +62,4 @@ Custom property | Description | Default
 --dile-confirm-padding-button | Button padding | 7px
 --dile-confirm-font-size-button | Button font size | 1em
 --dile-confirm-buttons-text-align | Buttons element text align | right
+--dile-confirm-text-transform  | Button text transformation | uppercase
