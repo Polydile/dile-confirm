@@ -32,6 +32,7 @@ export class DileConfirm  extends LitElement {
       }
       .actions a {
         margin: 4px;
+        white-space: nowrap;
       }
     `;
   }
