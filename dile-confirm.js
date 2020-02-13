@@ -24,7 +24,10 @@ export class DileConfirm  extends LitElement {
         color: var(--dile-confirm-accept-text-button-color, #fff);
       }
       .actions {
-        margin: 10px 0;
+        margin-top: var(--dile-confirm-buttons-margin-top, 10px);
+        margin-bottom: var(--dile-confirm-buttons-margin-bottom, 10px);
+        margin-right: var(--dile-confirm-buttons-margin-right, 0);
+        margin-left: var(--dile-confirm-buttons-margin-left, 0);
         text-align: var(--dile-confirm-buttons-text-align, right);
       }
       .actions a {
